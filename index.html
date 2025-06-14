@@ -73,3 +73,136 @@
   </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sync IB Tutoring</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background-color: #004d7a;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    button {
+      background-color: #0077cc;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 5% auto;
+      padding: 1rem;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 700px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover {
+      color: #000;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #eee;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sync IB Tutoring</h1>
+    <p>Personalised tutoring for Year 10–12 IB students</p>
+    <p>Founded by Ayushi Bhujel</p>
+    <button onclick="openForm()">Register Interest</button>
+  </header>
+
+  <section>
+    <h2>Why Choose Us?</h2>
+    <p>We’re a team of recent high-achieving IB graduates offering tailored tutoring in HL and SL subjects. With flexible scheduling, relatable tutors, and affordable pricing — we help you reach your academic goals faster.</p>
+  </section>
+
+  <!-- Modal -->
+  <div id="formModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeForm()">&times;</span>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSciwwNxI6VG0EDKRAycR8d-wtduKRPlT6o0YQ0uOzjg03ZYMw/viewform?usp=dialog"
+              width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Sync IB Tutoring. All rights reserved.
+  </footer>
+
+  <script>
+    function openForm() {
+      document.getElementById("formModal").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("formModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById("formModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+
+</body>
+</html>
+

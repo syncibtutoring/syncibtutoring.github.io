@@ -5,34 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SYNC IB Tutoring</title>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5;
+      background-color: #f4f4f9;
       color: #222;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
       background-color: #1c1c1c;
       color: #fff;
-      padding: 2rem;
+      padding: 3rem 1rem;
       text-align: center;
     }
 
     header img {
-      max-width: 100px;
+      max-width: 120px;
       margin-bottom: 1rem;
+      border-radius: 10px;
     }
 
     header h1 {
-      margin: 0.2rem 0;
+      margin: 0.5rem 0;
+      font-size: 2.5rem;
     }
 
     header p {
+      font-size: 1.1rem;
       font-style: italic;
     }
 
@@ -40,85 +43,104 @@
       display: flex;
       justify-content: center;
       background-color: #333;
-      padding: 0.8rem;
+      padding: 1rem;
+      flex-wrap: wrap;
     }
 
     nav a {
       color: white;
-      margin: 0 1.2rem;
+      margin: 0.6rem 1.5rem;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
     }
 
     section {
-      padding: 2rem;
-      max-width: 900px;
+      padding: 3rem 2rem;
+      max-width: 1000px;
       margin: auto;
     }
 
     h1, h2, h3 {
       color: #1c1c1c;
+      margin-bottom: 1rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
     }
 
     .testimonial {
       background-color: #ffffff;
-      padding: 1.2rem;
-      margin: 1rem 0;
-      border-left: 5px solid #1c1c1c;
-      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-left: 6px solid #1c1c1c;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-radius: 6px;
     }
 
     form {
       background-color: #ffffff;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     label {
       display: block;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
       font-weight: bold;
     }
 
     input, select, textarea {
       width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1.2rem;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-size: 1rem;
     }
 
     button {
       background-color: #1c1c1c;
       color: white;
-      padding: 0.8rem 2rem;
+      padding: 0.9rem 2.5rem;
       border: none;
-      border-radius: 5px;
-      font-size: 1rem;
+      border-radius: 6px;
+      font-size: 1.1rem;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #444;
     }
 
     footer {
       background-color: #1c1c1c;
       color: white;
       text-align: center;
-      padding: 1.2rem;
-      margin-top: 3rem;
+      padding: 1.5rem 1rem;
+      margin-top: 4rem;
     }
 
     img.banner {
       width: 100%;
       height: auto;
-      border-radius: 10px;
-      margin-bottom: 2rem;
+      border-radius: 12px;
+      margin-bottom: 2.5rem;
+    }
+
+    #contact-info a {
+      color: #1c1c1c;
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <img src="logo.JPEG" alt="SYNC IB Logo">
+    <img src="/mnt/data/Screen Shot 2025-01-15 at 6.30.17 pm.JPEG" alt="SYNC IB Logo">
     <h1>SYNC IB TUTORING</h1>
     <p>Ayushi Bhujel</p>
     <p>Empowering Year 10–12 students to excel in the IB</p>
@@ -192,7 +214,7 @@
   </footer>
 
   <script>
-    const scriptURL = 'YOUR_GOOGLE_SCRIPT_URL'; // <-- Replace with your Google Apps Script URL
+    const scriptURL = 'YOUR_GOOGLE_SCRIPT_URL';
     const form = document.forms['submit-to-google-sheet'];
     const msg = document.getElementById("msg");
 

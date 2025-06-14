@@ -1,192 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SYNC IB Tutoring</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SYNC IB Tutoring</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+  <style>
     body {
+      font-family: 'Raleway', sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #222;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #253237;
-      color: white;
-      padding: 3rem 1rem 2rem;
+      background-color: #1c1c1c;
+      color: #fff;
+      padding: 2rem;
       text-align: center;
     }
 
+    header img {
+      max-width: 100px;
+      margin-bottom: 1rem;
+    }
+
     header h1 {
-      margin: 0;
-      font-size: 3rem;
-      letter-spacing: 1px;
+      margin: 0.2rem 0;
     }
 
     header p {
-      font-size: 1.2rem;
-      margin-top: 0.8rem;
+      font-style: italic;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 3rem auto;
-      background-color: #fff;
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 0.8rem;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1.2rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
       padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: auto;
     }
 
-    .container h2 {
-      color: #253237;
-      margin-bottom: 1.5rem;
+    h1, h2, h3 {
+      color: #1c1c1c;
+    }
+
+    .testimonial {
+      background-color: #ffffff;
+      padding: 1.2rem;
+      margin: 1rem 0;
+      border-left: 5px solid #1c1c1c;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     label {
-      font-weight: 600;
       display: block;
-      margin: 1rem 0 0.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
     }
 
     input, select, textarea {
       width: 100%;
-      padding: 0.75rem;
-      border-radius: 6px;
+      padding: 0.8rem;
+      margin-bottom: 1.2rem;
       border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
-    textarea {
-      resize: vertical;
+      border-radius: 5px;
     }
 
     button {
-      background-color: #253237;
+      background-color: #1c1c1c;
       color: white;
-      padding: 0.75rem 2rem;
+      padding: 0.8rem 2rem;
       border: none;
-      border-radius: 8px;
+      border-radius: 5px;
       font-size: 1rem;
-      margin-top: 1.5rem;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #192122;
-    }
-
-    .success-message {
-      margin-top: 1.5rem;
-      color: green;
-      font-weight: 600;
     }
 
     footer {
+      background-color: #1c1c1c;
+      color: white;
       text-align: center;
-      font-size: 0.9rem;
-      color: #888;
-      margin: 4rem 0 1rem;
+      padding: 1.2rem;
+      margin-top: 3rem;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      .container {
-        margin: 1rem;
-        padding: 1.5rem;
-      }
+    img.banner {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 2rem;
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
-    <h1>SYNC IB Tutoring</h1>
-    <p>Personalised support for Year 10–12 IB students</p>
+    <img src="/mnt/data/Screen Shot 2025-01-15 at 6.30.17 pm.JPEG" alt="SYNC IB Logo">
+    <h1>SYNC IB TUTORING</h1>
+    <p>Ayushi Bhujel</p>
+    <p>Empowering Year 10–12 students to excel in the IB</p>
   </header>
 
-  <div class="container">
-    <h2>Expression of Interest</h2>
-    <form id="interest-form">
-      <label for="name">Full Name</label>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#subjects">Subjects</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Get in Touch</a>
+    <a href="#contact-info">Contact Info</a>
+  </nav>
+
+  <section>
+    <img src="https://images.unsplash.com/photo-1600195077078-3b52a84b82d7?fit=crop&w=1200&q=80" alt="Tutoring Banner" class="banner">
+
+    <h2 id="about">Meet the Founder</h2>
+    <p>Hi! I'm Ayushi Bhujel, the founder of SYNC IB Tutoring. With 4 years of tutoring experience and a passion for education, I started this initiative to help students truly thrive in their IB journey. I graduated with a 99.1 ATAR and received academic excellence in the IB diploma. I understand what it takes to succeed—and I'm here to help you do the same.</p>
+
+    <h2 id="subjects">Subjects We Offer</h2>
+    <ul>
+      <li>Mathematics: AA & AI (SL & HL)</li>
+      <li>English: Language & Literature</li>
+      <li>Chemistry (SL & HL)</li>
+      <li>Biology (SL & HL)</li>
+      <li>Business Management</li>
+      <li>Economics</li>
+      <li>Psychology</li>
+      <li>Theory of Knowledge (TOK)</li>
+    </ul>
+
+    <h2 id="testimonials">Testimonials</h2>
+    <div class="testimonial">
+      <p>"Ayushi made the toughest IB concepts so easy to understand. She’s not only a tutor but a mentor who truly cares about her students’ success." – IB Year 12 Student</p>
+    </div>
+    <div class="testimonial">
+      <p>"We noticed a huge improvement in our daughter’s grades after joining SYNC IB. Highly recommend!" – Parent of Year 11 Student</p>
+    </div>
+
+    <h2 id="contact">Get in Touch</h2>
+    <form name="submit-to-google-sheet">
+      <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
 
-      <label for="email">Email Address</label>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="email">Email</label>
       <input type="email" id="email" name="email" required>
 
-      <label for="year">IB Year Level</label>
-      <select id="year" name="year" required>
-        <option value="">-- Select Year --</option>
-        <option value="Year 10">Year 10</option>
-        <option value="Year 11">Year 11</option>
-        <option value="Year 12">Year 12</option>
+      <label for="role">Are you a:</label>
+      <select id="role" name="role">
+        <option value="Student">Student</option>
+        <option value="Parent">Parent</option>
       </select>
 
-      <label for="subjects">Subjects you're seeking help with</label>
-      <input type="text" id="subjects" name="subjects" placeholder="e.g. HL Chemistry, SL English Lang & Lit" required>
-
-      <label for="message">Tell us more (optional)</label>
-      <textarea id="message" name="message" rows="4" placeholder="What you're looking for, preferred times, etc."></textarea>
+      <label for="message">What do you need help with?</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
       <button type="submit">Submit</button>
-      <div class="success-message" id="response"></div>
     </form>
-  </div>
+    <p id="msg"></p>
+
+    <h2 id="contact-info">Contact Info</h2>
+    <p>Email: <a href="mailto:ayushi.ibtutoring@gmail.com">ayushi.ibtutoring@gmail.com</a></p>
+    <p>Phone: 0400 000 000</p>
+  </section>
 
   <footer>
-    &copy; 2025 SYNC IB Tutoring. All rights reserved.
+    <p>&copy; 2025 SYNC IB Tutoring | Designed by Ayushi Bhujel</p>
   </footer>
 
   <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbzyNb7tFtTGFPJLoEA6FWI1aVgIWrt4u2kZ3EaUuCM90mX_pfJHz52ogjDCTBUGwegg/exec";
-    const form = document.getElementById("interest-form");
-    const response = document.getElementById("response");
+    const scriptURL = 'YOUR_GOOGLE_SCRIPT_URL'; // <-- Replace with your Google Apps Script URL
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("msg");
 
-    form.addEventListener("submit", e => {
+    form.addEventListener('submit', e => {
       e.preventDefault();
-      response.textContent = "Submitting...";
-
-      const formData = {
-        name: form.name.value.trim(),
-        email: form.email.value.trim(),
-        year: form.year.value,
-        subjects: form.subjects.value.trim(),
-        message: form.message.value.trim()
-      };
-
       fetch(scriptURL, {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          "Content-Type": "application/json"
-        }
+        method: 'POST',
+        body: new FormData(form)
       })
-      .then(res => res.json())
-      .then(data => {
-        if (data.result === "success") {
-          response.textContent = "Thank you! We'll be in touch shortly.";
+        .then(response => {
+          msg.innerHTML = "Thank you! We’ll be in touch soon!";
           form.reset();
-        } else {
-          response.textContent = "Something went wrong. Please try again.";
-        }
-      })
-      .catch(err => {
-        console.error("Submission error", err);
-        response.textContent = "Submission failed. Please try again later.";
-      });
+        })
+        .catch(error => console.error('Error!', error.message));
     });
   </script>
-
 </body>
+
 </html>
-
-

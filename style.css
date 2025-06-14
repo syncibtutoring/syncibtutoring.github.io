@@ -36,27 +36,35 @@ footer {
   padding: 1rem;
 }
 /* Contact Form Styling */
-#contact {
-  background-color: #f9f9f9;
-  padding: 50px 20px;
-  text-align: center;
+#ib-contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-#contact h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
+#ib-contact-form input,
+#ib-contact-form select,
+#ib-contact-form textarea {
+  padding: 12px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
-#contact p {
-  font-size: 1.1em;
-  margin-bottom: 40px;
-  color: #555;
-}
-
-#contact iframe {
+#ib-contact-form button {
+  padding: 12px;
+  background: #004AAD;
+  color: white;
+  font-weight: bold;
   border: none;
-  width: 100%;
-  max-width: 700px;
-  height: 800px;
-  margin: 0 auto;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#ib-contact-form button:hover {
+  background: #00368f;
+}
+
 }

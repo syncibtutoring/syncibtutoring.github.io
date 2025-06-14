@@ -235,31 +235,31 @@
   <footer>
     <p>&copy; 2025 SYNC IB Tutoring | Designed by Ayushi Bhujel</p>
   </footer>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxdhZqWiava2XFXvZt9eAJLUxtt6YzYM9LJKygEBMcrkkhK6578_hHXH5pL45m8Rz6ZnA/exec';
+  const form = document.forms['submit-to-google-sheet'];
+  const msg = document.getElementById("msg");
 
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxxJXFbPnb8qr7qsPz18Ix9CR7f6GHdNomSlKXgVtJNM_y6t2Y_g0QoaJRMtR8ubOH1/exec';
-const form = document.forms['submit-to-google-sheet'];
-const msg = document.getElementById("msg");
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    msg.innerHTML = "Sending...";
+    form.querySelector('button[type="submit"]').disabled = true;
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  msg.innerHTML = "Sending...";
-  form.querySelector('button[type="submit"]').disabled = true;
-
-  fetch(scriptURL, {
-    method: 'POST',
-    body: new FormData(form)
-  })
-  .then(response => {
-    if (!response.ok) throw new Error(`Error: ${response.statusText}`);
-    msg.innerHTML = "Thank you! We’ll be in touch soon!";
-    form.reset();
-  })
-  .catch(error => {
-    console.error('Error!', error.message);
-    msg.innerHTML = "Oops, there was an error submitting the form.";
-  })
-  .finally(() => {
-    form.querySelector('button[type="submit"]').disabled = false;
+    fetch(scriptURL, {
+      method: 'POST',
+      body: new FormData(form)
+    })
+    .then(response => {
+      if (!response.ok) throw new Error(`Error: ${response.statusText}`);
+      msg.innerHTML = "Thank you! We’ll be in touch soon!";
+      form.reset();
+    })
+    .catch(error => {
+      console.error('Error!', error.message);
+      msg.innerHTML = "Oops, there was an error submitting the form.";
+    })
+    .finally(() => {
+      form.querySelector('button[type="submit"]').disabled = false;
+    });
   });
-});
+</script>

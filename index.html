@@ -38,11 +38,37 @@
     </ul>
   </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: syncibtutoring@gmail.com</p>
-    <p>Instagram: @syncibtutoring</p>
-  </section>
+ <section id="contact">
+  <h2>Expression of Interest</h2>
+  <p>Fill out the form below to let us know what you need help with!</p>
+
+  <form action="https://formspree.io/f/yourFormID" method="POST">
+    <label for="name">Name*</label><br />
+    <input type="text" name="name" id="name" required /><br /><br />
+
+    <label for="email">Email*</label><br />
+    <input type="email" name="email" id="email" required /><br /><br />
+
+    <label for="subjects">Subjects You’re Interested In:</label><br />
+    <select name="subjects[]" id="subjects" multiple required>
+      <option value="Math AA">Math AA (SL/HL)</option>
+      <option value="Math AI">Math AI (SL/HL)</option>
+      <option value="English Literature">English Literature</option>
+      <option value="English LangLit">English LangLit</option>
+      <option value="Biology">Biology</option>
+      <option value="Chemistry">Chemistry</option>
+      <option value="Physics">Physics</option>
+      <option value="Economics">Economics</option>
+      <option value="Psychology">Psychology</option>
+      <option value="Business">Business</option>
+    </select><br /><br />
+
+    <label for="message">Message (optional)</label><br />
+    <textarea name="message" id="message" rows="5"></textarea><br /><br />
+
+    <button type="submit">Submit</button>
+  </form>
+</section>
 
   <footer>
     <p>&copy; 2025 IB Sync Tutoring</p>

@@ -1,88 +1,155 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>IB Sync Tutoring</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>SYNC IB Tutoring</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2f3e46;
+      padding: 1.5rem;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .form-container {
+      background: white;
+      max-width: 600px;
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: #2f3e46;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #2f3e46;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-top: 1.5rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1e2a30;
+    }
+
+    .success-message {
+      margin-top: 1rem;
+      color: green;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>IB Sync Tutoring</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>SYNC IB Tutoring</h1>
+    <p>Specialised tutoring for Year 10–12 IB students</p>
   </header>
 
-  <section id="hero">
-    <h2>IB Success Starts Here</h2>
-    <p>Specialised tutoring for Year 10–12 IB students, led by top graduates.</p>
-  </section>
+  <div class="form-container">
+    <h2>Expression of Interest</h2>
+    <form id="interest-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Founded by Ayushi Bhujel, IB Sync Tutoring is dedicated to empowering IB students through high-quality, relatable support.</p>
-  </section>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
 
-  <section id="services">
-    <h2>Subjects We Tutor</h2>
-    <ul>
-      <li>Mathematics: AA & AI (SL/HL)</li>
-      <li>English: Literature, LangLit (SL/HL)</li>
-      <li>Sciences: Biology, Chemistry, Physics</li>
-      <li>Humanities: Economics, Psychology, Business</li>
-      <li>And more by request!</li>
-    </ul>
-  <section id="contact" style="padding: 50px; background: #f9f9f9;">
-  <h2>Get in Touch</h2>
-  <form id="ib-contact-form">
-    <input type="text" name="name" placeholder="Full Name" required><br>
-    <input type="email" name="email" placeholder="Email Address" required><br>
-    <select name="year" required>
-      <option value="" disabled selected>Select Year Level</option>
-      <option>Year 10</option>
-      <option>Year 11</option>
-      <option>Year 12</option>
-    </select><br>
-    <input type="text" name="subjects" placeholder="Subjects (e.g., Math, Chem)" required><br>
-    <textarea name="message" placeholder="Additional Comments" rows="4"></textarea><br>
-    <button type="submit">Submit</button>
-  </form>
-  <p id="form-status" style="color: green; display: none;">Thanks! We’ll be in touch soon.</p>
-</section>
-    <script>
-  document.getElementById("ib-contact-form").addEventListener("submit", function(e) {
-    e.preventDefault();
+      <label for="year">IB Year</label>
+      <select id="year" name="year" required>
+        <option value="">-- Select --</option>
+        <option value="Year 10">Year 10</option>
+        <option value="Year 11">Year 11</option>
+        <option value="Year 12">Year 12</option>
+      </select>
 
-    const form = e.target;
-    const data = {
-      name: form.name.value,
-      email: form.email.value,
-      year: form.year.value,
-      subjects: form.subjects.value,
-      message: form.message.value
-    };
+      <label for="subjects">Subjects (comma-separated)</label>
+      <input type="text" id="subjects" name="subjects" placeholder="e.g. HL Biology, SL Maths AI" required>
 
-    fetch("https://script.google.com/macros/s/AKfycbzyNb7tFtTGFPJLoEA6FWI1aVgIWrt4u2kZ3EaUuCM90mX_pfJHz52ogjDCTBUGwegg/exec", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-    .then(res => res.json())
-    .then(() => {
-      document.getElementById("form-status").style.display = "block";
-      form.reset();
-    })
-    .catch(() => {
-      alert("There was a problem submitting your form.");
+      <label for="message">Anything you'd like us to know?</label>
+      <textarea id="message" name="message" rows="4" placeholder="Optional"></textarea>
+
+      <button type="submit">Submit</button>
+      <div class="success-message" id="response"></div>
+    </form>
+  </div>
+
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzyNb7tFtTGFPJLoEA6FWI1aVgIWrt4u2kZ3EaUuCM90mX_pfJHz52ogjDCTBUGwegg/exec";
+    const form = document.getElementById("interest-form");
+    const response = document.getElementById("response");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        year: form.year.value,
+        subjects: form.subjects.value,
+        message: form.message.value
+      };
+
+      fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.result === "success") {
+          response.textContent = "Thanks! We'll be in touch soon.";
+          form.reset();
+        } else {
+          response.textContent = "Something went wrong. Please try again.";
+        }
+      })
+      .catch(err => {
+        console.error("Error!", err.message);
+        response.textContent = "Error sending form. Try again later.";
+      });
     });
-  });
-</script>
+  </script>
 
-
-
+</body>
+</html>

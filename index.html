@@ -24,18 +24,24 @@
     }
 
     header img {
-      max-width: 120px;
+      max-width: 180px;
       margin-bottom: 1rem;
       border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.05);
     }
 
     header h1 {
       margin: 0.5rem 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
 
     header p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-style: italic;
     }
 
@@ -70,10 +76,19 @@
       margin-bottom: 0.5rem;
     }
 
+    .testimonial-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      padding-bottom: 1rem;
+    }
+
     .testimonial {
+      flex: 0 0 90%;
+      scroll-snap-align: start;
       background-color: #ffffff;
       padding: 1.5rem;
-      margin: 1.5rem 0;
       border-left: 6px solid #1c1c1c;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       border-radius: 6px;
@@ -173,11 +188,19 @@
     </ul>
 
     <h2 id="testimonials">Testimonials</h2>
-    <div class="testimonial">
-      <p>"Ayushi made the toughest IB concepts so easy to understand. She’s not only a tutor but a mentor who truly cares about her students’ success." – IB Year 12 Student</p>
-    </div>
-    <div class="testimonial">
-      <p>"We noticed a huge improvement in our daughter’s grades after joining SYNC IB. Highly recommend!" – Parent of Year 11 Student</p>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <p>"Ayushi made the toughest IB concepts so easy to understand. She’s not only a tutor but a mentor who truly cares about her students’ success." – IB Year 12 Student</p>
+      </div>
+      <div class="testimonial">
+        <p>"We noticed a huge improvement in our daughter’s grades after joining SYNC IB. Highly recommend!" – Parent of Year 11 Student</p>
+      </div>
+      <div class="testimonial">
+        <p>"I was struggling with HL Math, but thanks to SYNC IB, I ended up with a 6! Ayushi’s methods are top-notch." – IB Graduate</p>
+      </div>
+      <div class="testimonial">
+        <p>"The support, motivation, and structure SYNC IB provides is amazing. It helped me stay on track and confident." – Year 12 Student</p>
+      </div>
     </div>
 
     <h2 id="contact">Get in Touch</h2>

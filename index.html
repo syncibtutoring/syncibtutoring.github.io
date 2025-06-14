@@ -1,79 +1,109 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SYNC IB Tutoring</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f6f8;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
     }
 
     header {
-      background-color: #2f3e46;
-      padding: 1.5rem;
+      background-color: #253237;
       color: white;
+      padding: 3rem 1rem 2rem;
       text-align: center;
     }
 
-    h1 {
+    header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 3rem;
+      letter-spacing: 1px;
     }
 
-    .form-container {
-      background: white;
-      max-width: 600px;
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.8rem;
+    }
+
+    .container {
+      max-width: 800px;
       margin: 3rem auto;
+      background-color: #fff;
       padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     }
 
-    .form-container h2 {
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-      color: #2f3e46;
+    .container h2 {
+      color: #253237;
+      margin-bottom: 1.5rem;
     }
 
     label {
-      display: block;
-      margin-top: 1rem;
       font-weight: 600;
+      display: block;
+      margin: 1rem 0 0.5rem;
     }
 
     input, select, textarea {
       width: 100%;
       padding: 0.75rem;
-      margin-top: 0.5rem;
+      border-radius: 6px;
       border: 1px solid #ccc;
-      border-radius: 8px;
       font-size: 1rem;
     }
 
+    textarea {
+      resize: vertical;
+    }
+
     button {
-      background-color: #2f3e46;
+      background-color: #253237;
       color: white;
-      padding: 0.8rem 2rem;
+      padding: 0.75rem 2rem;
       border: none;
       border-radius: 8px;
       font-size: 1rem;
       margin-top: 1.5rem;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: background-color 0.3s ease;
     }
 
     button:hover {
-      background-color: #1e2a30;
+      background-color: #192122;
     }
 
     .success-message {
-      margin-top: 1rem;
+      margin-top: 1.5rem;
       color: green;
       font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      margin: 4rem 0 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -81,10 +111,10 @@
 
   <header>
     <h1>SYNC IB Tutoring</h1>
-    <p>Specialised tutoring for Year 10–12 IB students</p>
+    <p>Personalised support for Year 10–12 IB students</p>
   </header>
 
-  <div class="form-container">
+  <div class="container">
     <h2>Expression of Interest</h2>
     <form id="interest-form">
       <label for="name">Full Name</label>
@@ -93,63 +123,9 @@
       <label for="email">Email Address</label>
       <input type="email" id="email" name="email" required>
 
-      <label for="year">IB Year</label>
+      <label for="year">IB Year Level</label>
       <select id="year" name="year" required>
-        <option value="">-- Select --</option>
+        <option value="">-- Select Year --</option>
         <option value="Year 10">Year 10</option>
         <option value="Year 11">Year 11</option>
-        <option value="Year 12">Year 12</option>
-      </select>
 
-      <label for="subjects">Subjects (comma-separated)</label>
-      <input type="text" id="subjects" name="subjects" placeholder="e.g. HL Biology, SL Maths AI" required>
-
-      <label for="message">Anything you'd like us to know?</label>
-      <textarea id="message" name="message" rows="4" placeholder="Optional"></textarea>
-
-      <button type="submit">Submit</button>
-      <div class="success-message" id="response"></div>
-    </form>
-  </div>
-
-  <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbzyNb7tFtTGFPJLoEA6FWI1aVgIWrt4u2kZ3EaUuCM90mX_pfJHz52ogjDCTBUGwegg/exec";
-    const form = document.getElementById("interest-form");
-    const response = document.getElementById("response");
-
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const formData = {
-        name: form.name.value,
-        email: form.email.value,
-        year: form.year.value,
-        subjects: form.subjects.value,
-        message: form.message.value
-      };
-
-      fetch(scriptURL, {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          "Content-Type": "application/json"
-        }
-      })
-      .then(res => res.json())
-      .then(data => {
-        if (data.result === "success") {
-          response.textContent = "Thanks! We'll be in touch soon.";
-          form.reset();
-        } else {
-          response.textContent = "Something went wrong. Please try again.";
-        }
-      })
-      .catch(err => {
-        console.error("Error!", err.message);
-        response.textContent = "Error sending form. Try again later.";
-      });
-    });
-  </script>
-
-</body>
-</html>

@@ -11,37 +11,24 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f9;
-      color: #222;
+      background-color: #fffaf3; /* Cream */
+      color: #1c1c1c;
       line-height: 1.7;
     }
 
     header {
-      background-color: #1c1c1c;
-      color: #fff;
+      background-color: #005f73; /* Teal Blue */
+      color: #ffffff;
       padding: 3rem 1rem;
       text-align: center;
     }
 
-    header img {
-      max-width: 180px;
-      margin-bottom: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease;
-    }
-
-    header img:hover {
-      transform: scale(1.05);
-    }
-
     header h1 {
-       margin: 0.5rem 0;
-  font-size: 4rem; /* Make the text bigger */
-  letter-spacing: 0.15em;
-  font-weight: 600;
-  color: #fff; /* Ensures it stays white on the dark background */
-  text-shadow: 2px 4px 16px rgba(0,0,0,0.3); /* Adds a nice shadow */
+      margin: 0.5rem 0;
+      font-size: 4rem;
+      letter-spacing: 0.15em;
+      font-weight: 600;
+      text-shadow: 2px 4px 16px rgba(0, 0, 0, 0.3);
     }
 
     header p {
@@ -52,7 +39,7 @@
     nav {
       display: flex;
       justify-content: center;
-      background-color: #333;
+      background-color: #0a9396; /* Soft Blue-Green */
       padding: 1rem;
       flex-wrap: wrap;
     }
@@ -71,10 +58,8 @@
       margin: auto;
     }
 
-    h1,
-    h2,
-    h3 {
-      color: #1c1c1c;
+    h1, h2, h3 {
+      color: #005f73;
       margin-bottom: 1rem;
     }
 
@@ -95,7 +80,7 @@
       scroll-snap-align: start;
       background-color: #ffffff;
       padding: 1.5rem;
-      border-left: 6px solid #1c1c1c;
+      border-left: 6px solid #ee9b00; /* Gold */
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       border-radius: 6px;
     }
@@ -125,7 +110,7 @@
     }
 
     button {
-      background-color: #1c1c1c;
+      background-color: #ee9b00; /* Gold */
       color: white;
       padding: 0.9rem 2.5rem;
       border: none;
@@ -136,11 +121,11 @@
     }
 
     button:hover {
-      background-color: #444;
+      background-color: #ca8600;
     }
 
     footer {
-      background-color: #1c1c1c;
+      background-color: #005f73;
       color: white;
       text-align: center;
       padding: 1.5rem 1rem;
@@ -155,7 +140,7 @@
     }
 
     #contact-info a {
-      color: #1c1c1c;
+      color: #005f73;
       text-decoration: underline;
     }
   </style>
@@ -176,8 +161,8 @@
   </nav>
 
   <section>
-    <img src="https://images.unsplash.com/photo-1600195077078-3b52a84b82d7?fit=crop&w=1200&q=80"> 
-    
+    <img class="banner" src="https://images.unsplash.com/photo-1600195077078-3b52a84b82d7?fit=crop&w=1200&q=80">
+
     <h2 id="about">Meet the Founder</h2>
     <p>
       Hi! I'm Ayushi Bhujel, the founder of SYNC IB Tutoring. With 4 years of
@@ -288,8 +273,7 @@
         .finally(() => {
           form.querySelector('button[type="submit"]').disabled = false;
         });
-    });
   </script>
 </body>
-
 </html>
+

@@ -19,25 +19,34 @@
     header {
       background-color: #005f73; /* Teal Blue */
       color: #ffffff;
-      padding: 3rem 1rem;
+      padding: 1.5rem 1rem;
       text-align: center;
     }
 
+    .logo-wrapper {
+      background-color: #fffaf3;
+      padding: 0.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      display: inline-block;
+    }
+
     .logo {
-      width: 100%;
-      max-width: 850px;
+      max-width: 650px;
+      width: 95%;
       height: auto;
-      margin-bottom: 0.5rem;
-      filter: brightness(98%) saturate(110%);
       display: block;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 0.2rem;
+      filter: brightness(98%) saturate(110%);
     }
 
     header p {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #d4a23a; /* Updated soft gold color from logo */
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #d4a23a; /* soft gold */
+      margin-top: 0.2rem;
     }
 
     nav {
@@ -152,7 +161,9 @@
 
 <body>
   <header>
-    <img src="logo.png" alt="SYNC IB Tutoring Logo" class="logo" />
+    <div class="logo-wrapper">
+      <img src="logo.png" alt="SYNC IB Tutoring Logo" class="logo" />
+    </div>
     <p>Empowering Year 10–12 students to excel in the IB</p>
   </header>
 

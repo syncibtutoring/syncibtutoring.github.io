@@ -1,16 +1,24 @@
 header {
-  background-color: #005f73; /* Teal Blue */
-  color: #ffffff;
+  background-color: #fffaf3; /* Cream background */
+  color: #005f73;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-bottom: 2px solid #005f73; /* Teal accent line */
 }
 
-.logo {
-  height: 30px; /* was 50px before */
-  margin-bottom: 1rem;
-  filter: brightness(98%) saturate(120%);
+header p {
+  font-size: 1.2rem;
+  color: #005f73;
+  font-style: italic;
+  text-align: center;
 }
+.logo {
+  height: 40px;
+  margin-bottom: 0.8rem;
+  filter: brightness(98%) saturate(110%);
+}
+
 

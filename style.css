@@ -16,9 +16,10 @@ header p {
   text-align: center;
 }
 .logo {
-  height: 20px;
+  height: 25px; /* or try 25px if you want it really subtle */
   margin-bottom: 0.8rem;
   filter: brightness(98%) saturate(110%);
 }
+
 
 

@@ -9,7 +9,7 @@ header {
 }
 
 .logo {
-  height: 50px; /* was 70px before */
+  height: 30px; /* was 50px before */
   margin-bottom: 1rem;
   filter: brightness(98%) saturate(120%);
 }

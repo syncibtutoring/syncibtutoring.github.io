@@ -1,20 +1,3 @@
-header {
-  background-color: #fffaf3; /* Cream background */
-  color: #005f73;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 2px solid #005f73; /* Teal accent line */
-}
-
-header p {
-  font-size: 1.2rem;
-  color: #005f73;
-  font-style: italic;
-  text-align: center;
-}
 .logo {
   height: 25px !important;
   margin-bottom: 0.5rem;

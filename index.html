@@ -140,22 +140,105 @@
       color: #333;
     }
 
-    .testimonial-container {
+    /* NEW testimonial styles */
+
+    .testimonial-cluster {
       display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
+      flex-wrap: wrap;
       gap: 1rem;
-      padding-bottom: 1rem;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 0 auto 3rem auto;
+      padding: 0 1rem;
     }
 
-    .testimonial {
-      flex: 0 0 90%;
-      scroll-snap-align: start;
-      background-color: #ffffff;
-      padding: 1.5rem;
-      border-left: 6px solid #ee9b00;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      border-radius: 6px;
+    .testimonial-bubble {
+      position: relative;
+      background: white;
+      border-radius: 24px 24px 24px 6px;
+      padding: 1rem 1.5rem 1.5rem 1.5rem;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      max-width: 280px;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      cursor: default;
+      flex: 1 1 280px;
+      animation: popIn 0.6s ease forwards;
+      opacity: 0;
+      transform: scale(0.85);
+      transition: transform 0.3s ease;
+    }
+
+    .testimonial-bubble:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .testimonial-bubble:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .testimonial-bubble:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    .testimonial-bubble:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+
+    .testimonial-bubble:nth-child(5) {
+      animation-delay: 0.5s;
+    }
+
+    .testimonial-bubble:nth-child(6) {
+      animation-delay: 0.6s;
+    }
+
+    .testimonial-bubble:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+      z-index: 10;
+    }
+
+    /* Speech bubble tail */
+    .testimonial-bubble::after {
+      content: "";
+      position: absolute;
+      bottom: 12px;
+      left: 20px;
+      width: 0;
+      height: 0;
+      border: 12px solid transparent;
+      border-top-color: white;
+      border-bottom: 0;
+      margin-left: -12px;
+      margin-bottom: -12px;
+      filter: drop-shadow(0 2px 2px rgba(0,0,0,0.04));
+    }
+
+    .stars {
+      color: #d4a23a;
+      margin-bottom: 0.5rem;
+      user-select: none;
+    }
+
+    @keyframes popIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Scroll horizontal on smaller screens */
+    @media (max-width: 600px) {
+      .testimonial-cluster {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+      }
+      .testimonial-bubble {
+        flex: 0 0 260px;
+        margin-bottom: 0;
+      }
     }
 
     form {
@@ -301,11 +384,31 @@
     <div id="tokModal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('tokModal')">&times;</span><h3>Theory of Knowledge (TOK)</h3><p>We help with developing strong claims/counterclaims, crafting insightful examples, and excelling in both the essay and exhibition.</p></div></div>
 
     <h2 id="testimonials">Testimonials</h2>
-    <div class="testimonial-container">
-      <div class="testimonial"><p>"Ayushi made the toughest IB concepts so easy to understand. She’s not only a tutor but a mentor who truly cares about her students’ success." – IB Year 12 Student</p></div>
-      <div class="testimonial"><p>"We noticed a huge improvement in our daughter’s grades after joining SYNC IB. Highly recommend!" – Parent of Year 11 Student</p></div>
-      <div class="testimonial"><p>"I was struggling with HL Math, but thanks to SYNC IB, I ended up with a 6! Ayushi’s methods are top-notch." – IB Graduate</p></div>
-      <div class="testimonial"><p>"The support, motivation, and structure SYNC IB provides is amazing. It helped me stay on track and confident." – Year 12 Student</p></div>
+    <div class="testimonial-cluster">
+      <div class="testimonial-bubble">
+        <div class="stars">★★★★★</div>
+        <p>"Ayushi made the toughest IB concepts so easy to understand. She’s not only a tutor but a mentor who truly cares about her students’ success." – IB Year 12 Student</p>
+      </div>
+      <div class="testimonial-bubble">
+        <div class="stars">★★★★★</div>
+        <p>"We noticed a huge improvement in our daughter’s grades after joining SYNC IB. Highly recommend!" – Parent of Year 11 Student</p>
+      </div>
+      <div class="testimonial-bubble">
+        <div class="stars">★★★★★</div>
+        <p>"I was struggling with HL Math, but thanks to SYNC IB, I ended up with a 6! Ayushi’s methods are top-notch." – IB Graduate</p>
+      </div>
+      <div class="testimonial-bubble">
+        <div class="stars">★★★★★</div>
+        <p>"The support, motivation, and structure SYNC IB provides is amazing. It helped me stay on track and confident." – Year 12 Student</p>
+      </div>
+      <div class="testimonial-bubble">
+        <div class="stars">★★★★★</div>
+        <p>"Thanks to SYNC IB, my IA received full marks! The personalized feedback made all the difference." – IB HL Student</p>
+      </div>
+      <div class="testimonial-bubble">
+        <div class="stars">★★★★★</div>
+        <p>"Professional, patient, and understanding. SYNC IB tutoring is the best decision I made this year." – Year 11 Student</p>
+      </div>
     </div>
 
     <h2 id="contact">Get in Touch</h2>
@@ -381,5 +484,3 @@
 </body>
 
 </html>
-     
-

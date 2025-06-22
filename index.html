@@ -11,13 +11,13 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fffaf3; /* Cream */
+      background-color: #fffaf3;
       color: #1c1c1c;
       line-height: 1.7;
     }
 
     header {
-      background-color: #005f73; /* Teal Blue */
+      background-color: #005f73;
       color: #ffffff;
       padding: 1.5rem 1rem;
       text-align: center;
@@ -36,23 +36,21 @@
       width: 95%;
       height: auto;
       display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 0.2rem;
+      margin: 0 auto 0.2rem;
       filter: brightness(98%) saturate(110%);
     }
 
     header p {
       font-size: 1.1rem;
       font-weight: 600;
-      color: #d4a23a; /* soft gold */
+      color: #d4a23a;
       margin-top: 0.2rem;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      background-color: #0a9396; /* Soft Blue-Green */
+      background-color: #0a9396;
       padding: 1rem;
       flex-wrap: wrap;
     }
@@ -76,8 +74,70 @@
       margin-bottom: 1rem;
     }
 
-    ul li {
-      margin-bottom: 0.5rem;
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .subject-card {
+      background-color: #ffffff;
+      border: 2px solid #ee9b00;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .subject-card button {
+      margin-top: 1rem;
+      background-color: #ee9b00;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .subject-card button:hover {
+      background-color: #ca8600;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 90%;
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #333;
     }
 
     .testimonial-container {
@@ -93,7 +153,7 @@
       scroll-snap-align: start;
       background-color: #ffffff;
       padding: 1.5rem;
-      border-left: 6px solid #ee9b00; /* Gold */
+      border-left: 6px solid #ee9b00;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       border-radius: 6px;
     }
@@ -122,8 +182,8 @@
       font-size: 1rem;
     }
 
-    button {
-      background-color: #ee9b00; /* Gold */
+    button[type="submit"] {
+      background-color: #ee9b00;
       color: white;
       padding: 0.9rem 2.5rem;
       border: none;
@@ -133,7 +193,7 @@
       transition: background-color 0.3s ease;
     }
 
-    button:hover {
+    button[type="submit"]:hover {
       background-color: #ca8600;
     }
 
@@ -176,78 +236,93 @@
   </nav>
 
   <section>
-    <img class="banner" src="https://images.unsplash.com/photo-1600195077078-3b52a84b82d7?fit=crop&w=1200&q=80">
+    <img class="banner" src="https://images.unsplash.com/photo-1600195077078-3b52a84b82d7?fit=crop&w=1200&q=80" alt="Student studying">
 
     <h2 id="about">Meet the Founder</h2>
     <p>
-      Hi! I'm Ayushi Bhujel, the founder of SYNC IB Tutoring. With 4 years of
-      tutoring experience and a passion for education, I started this initiative
-      to help students truly thrive in their IB journey. I graduated with a 99.1
-      ATAR and received academic excellence in the IB diploma. I understand
-      what it takes to succeed—and I'm here to help you do the same.
+      Hi! I'm Ayushi Bhujel, the founder of SYNC IB Tutoring. With 4 years of tutoring experience and a passion for education, I started this initiative to help students truly thrive in their IB journey. I graduated with a 99.1 ATAR and received academic excellence in the IB diploma. I understand what it takes to succeed—and I'm here to help you do the same.
     </p>
 
     <h2 id="subjects">Subjects We Offer</h2>
-    <ul>
-      <li>Mathematics: AA & AI (SL & HL)</li>
-      <li>English: Language & Literature</li>
-      <li>Chemistry (SL & HL)</li>
-      <li>Biology (SL & HL)</li>
-      <li>Business Management</li>
-      <li>Economics</li>
-      <li>Psychology</li>
-      <li>Theory of Knowledge (TOK)</li>
-    </ul>
+    <div class="subjects-grid">
+      <!-- Subject cards -->
+      <!-- Each subject can be expanded the same way -->
+      <div class="subject-card">
+        <h3>Mathematics: AA & AI</h3>
+        <p>SL & HL support with concepts, exam techniques, and IA guidance.</p>
+        <button onclick="openModal('mathModal')">Learn More</button>
+      </div>
+      <div class="subject-card">
+        <h3>English: Lang & Lit</h3>
+        <p>Essay writing, text analysis, Paper 1 and Paper 2 strategies.</p>
+        <button onclick="openModal('englishModal')">Learn More</button>
+      </div>
+      <div class="subject-card">
+        <h3>Chemistry</h3>
+        <p>Master core concepts, lab skills, and problem-solving methods.</p>
+        <button onclick="openModal('chemModal')">Learn More</button>
+      </div>
+      <div class="subject-card">
+        <h3>Biology</h3>
+        <p>Understand processes clearly with diagrams, summaries, and support.</p>
+        <button onclick="openModal('bioModal')">Learn More</button>
+      </div>
+      <div class="subject-card">
+        <h3>Business Management</h3>
+        <p>HL & SL content, case studies, exam prep, and IA structuring.</p>
+        <button onclick="openModal('bizModal')">Learn More</button>
+      </div>
+      <div class="subject-card">
+        <h3>Economics</h3>
+        <p>Diagrams, theory application, real-world examples for HL & SL.</p>
+        <button onclick="openModal('econModal')">Learn More</button>
+      </div>
+      <div class="subject-card">
+        <h3>Psychology</h3>
+        <p>Support with research studies, command terms, and SAQs/ERQs.</p>
+        <button onclick="openModal('psychModal')">Learn More</button>
+      </div>
+      <div class="subject-card">
+        <h3>Theory of Knowledge (TOK)</h3>
+        <p>Essay development, exhibition guidance, and real-life example use.</p>
+        <button onclick="openModal('tokModal')">Learn More</button>
+      </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Each modal matches the IDs used above -->
+    <div id="mathModal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('mathModal')">&times;</span><h3>Math AA & AI</h3><p>We offer intensive tutoring for both SL and HL Maths (AA and AI). We help with internal assessments (IAs), past paper drills, command term decoding, and conceptual understanding using visuals and real-life examples.</p></div></div>
+    <div id="englishModal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('englishModal')">&times;</span><h3>English: Language & Literature</h3><p>Support for Paper 1, Paper 2, IOs and HL Essay. Learn how to structure responses, analyze texts effectively and express ideas clearly.</p></div></div>
+    <div id="chemModal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('chemModal')">&times;</span><h3>Chemistry</h3><p>SL & HL support in stoichiometry, organic, bonding, energetics, kinetics, and more. Diagrams, experiments, and IA guidance included.</p></div></div>
+    <div id="bioModal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('bioModal')">&times;</span><h3>Biology</h3><p>We simplify complex biological processes with active recall, illustrations, and IA advice. Ideal for both SL and HL students.</p></div></div>
+    <div id="bizModal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('bizModal')">&times;</span><h3>Business Management</h3><p>Learn how to analyze case studies, write structured responses, and excel in your IA. Tailored to both HL and SL content.</p></div></div>
+    <div id="econModal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('econModal')">&times;</span><h3>Economics</h3><p>We help you understand theories, apply diagrams, and use real-world examples effectively for exams and IAs. Suitable for HL & SL.</p></div></div>
+    <div id="psychModal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('psychModal')">&times;</span><h3>Psychology</h3><p>Support in memorizing key studies, understanding ethical guidelines, and answering SAQs/ERQs with structured frameworks.</p></div></div>
+    <div id="tokModal" class="modal"><div class="modal-content"><span class="close-btn" onclick="closeModal('tokModal')">&times;</span><h3>Theory of Knowledge (TOK)</h3><p>We help with developing strong claims/counterclaims, crafting insightful examples, and excelling in both the essay and exhibition.</p></div></div>
 
     <h2 id="testimonials">Testimonials</h2>
     <div class="testimonial-container">
-      <div class="testimonial">
-        <p>
-          "Ayushi made the toughest IB concepts so easy to understand. She’s
-          not only a tutor but a mentor who truly cares about her students’
-          success." – IB Year 12 Student
-        </p>
-      </div>
-      <div class="testimonial">
-        <p>
-          "We noticed a huge improvement in our daughter’s grades after joining
-          SYNC IB. Highly recommend!" – Parent of Year 11 Student
-        </p>
-      </div>
-      <div class="testimonial">
-        <p>
-          "I was struggling with HL Math, but thanks to SYNC IB, I ended up with
-          a 6! Ayushi’s methods are top-notch." – IB Graduate
-        </p>
-      </div>
-      <div class="testimonial">
-        <p>
-          "The support, motivation, and structure SYNC IB provides is amazing.
-          It helped me stay on track and confident." – Year 12 Student
-        </p>
-      </div>
+      <div class="testimonial"><p>"Ayushi made the toughest IB concepts so easy to understand. She’s not only a tutor but a mentor who truly cares about her students’ success." – IB Year 12 Student</p></div>
+      <div class="testimonial"><p>"We noticed a huge improvement in our daughter’s grades after joining SYNC IB. Highly recommend!" – Parent of Year 11 Student</p></div>
+      <div class="testimonial"><p>"I was struggling with HL Math, but thanks to SYNC IB, I ended up with a 6! Ayushi’s methods are top-notch." – IB Graduate</p></div>
+      <div class="testimonial"><p>"The support, motivation, and structure SYNC IB provides is amazing. It helped me stay on track and confident." – Year 12 Student</p></div>
     </div>
 
     <h2 id="contact">Get in Touch</h2>
     <form name="submit-to-google-sheet">
       <label for="name">Name</label>
-      <input type="text" id="name" name="name" required />
-
+      <input type="text" id="name" name="name" required>
       <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" required />
-
+      <input type="tel" id="phone" name="phone" required>
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
-
+      <input type="email" id="email" name="email" required>
       <label for="role">Are you a:</label>
       <select id="role" name="role">
         <option value="Student">Student</option>
         <option value="Parent">Parent</option>
       </select>
-
       <label for="message">What do you need help with?</label>
       <textarea id="message" name="message" rows="5" required></textarea>
-
       <button type="submit">Submit</button>
     </form>
     <p id="msg"></p>
@@ -262,8 +337,21 @@
   </footer>
 
   <script>
-    const scriptURL =
-      'https://script.google.com/macros/s/AKfycbxdhZqWiava2XFXvZt9eAJLUxtt6YzYM9LJKygEBMcrkkhK6578_hHXH5pL45m8Rz6ZnA/exec';
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    window.onclick = function (e) {
+      document.querySelectorAll('.modal').forEach(modal => {
+        if (e.target === modal) modal.style.display = 'none';
+      });
+    }
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxdhZqWiava2XFXvZt9eAJLUxtt6YzYM9LJKygEBMcrkkhK6578_hHXH5pL45m8Rz6ZnA/exec';
     const form = document.forms['submit-to-google-sheet'];
     const msg = document.getElementById('msg');
 
@@ -288,7 +376,8 @@
         .finally(() => {
           form.querySelector('button[type="submit"]').disabled = false;
         });
+    });
   </script>
 </body>
-</html>
 
+</html>

@@ -244,11 +244,75 @@
     }
 
     form {
-      background-color: #ffffff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
+  background-color: #fffdf7;
+  padding: 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border: 2px solid #ee9b00;
+  margin-top: 2rem;
+  transition: transform 0.3s ease;
+}
+
+form:hover {
+  transform: scale(1.01);
+}
+
+form h2 {
+  color: #005f73;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+form p.subtext {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #0a9396;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 1.1rem;
+  margin-bottom: 1.7rem;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #0a9396;
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: #ee9b00;
+  color: white;
+  padding: 1rem 2.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(238, 155, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #ca8600;
+  transform: translateY(-2px);
+}
 
     label {
       display: block;
@@ -446,24 +510,32 @@
     </div>
   </div>
 </section>
-    <h2 id="contact">Get in Touch</h2>
-    <form name="submit-to-google-sheet">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" required>
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-      <label for="role">Are you a:</label>
-      <select id="role" name="role">
-        <option value="Student">Student</option>
-        <option value="Parent">Parent</option>
-      </select>
-      <label for="message">What do you need help with?</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-    <p id="msg"></p>
+   <h2 id="contact">Get in Touch</h2>
+<form name="submit-to-google-sheet">
+  <h2>Let's Connect!</h2>
+  <p class="subtext">Fill out the form and we’ll get back to you shortly. Whether you're a student or a parent, we’re here to help.</p>
+
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" name="phone" required>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="role">Are you a:</label>
+  <select id="role" name="role">
+    <option value="Student">Student</option>
+    <option value="Parent">Parent</option>
+  </select>
+
+  <label for="message">What do you need help with?</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+<p id="msg"></p>
 
     <h2 id="contact-info">Contact Info</h2>
     <p>Email: <a href="mailto:ayushi.ibtutoring@gmail.com">ayushi.ibtutoring@gmail.com</a></p>

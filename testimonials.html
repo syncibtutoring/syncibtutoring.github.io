@@ -48,13 +48,19 @@
 
   .testimonial-bubble {
   background: white;
-  border: 2px solid #f4a261; /* 🔸 Orangey border */
+  border: 2px solid #ee9b00; /* Match site-wide orange */
   border-radius: 24px 24px 24px 6px;
-  padding: 1rem 1.5rem;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.05);
-  font-size: 0.9rem;
-  line-height: 1.4;
+  padding: 1.2rem 1.6rem 1.7rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  font-size: 0.95rem;
+  line-height: 1.5;
   position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-bubble:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
     .testimonial-bubble::after {

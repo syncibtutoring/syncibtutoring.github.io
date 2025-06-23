@@ -405,6 +405,41 @@ button[type="submit"]:hover {
 .contact-item a:hover {
   color: #ee9b00;
 }
+  .carousel-container {
+  overflow: hidden;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.carousel-track {
+  display: flex;
+  animation: scroll 15s linear infinite;
+}
+.testimonial-bubble {
+  min-width: 300px;
+  margin: 0 1rem;
+  background: white;
+  border-radius: 24px 24px 24px 6px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+.view-all-btn {
+  background-color: #ee9b00;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.view-all-btn:hover {
+  background-color: #ca8600;
+}
   </style>
 </head>
 
@@ -497,57 +532,26 @@ button[type="submit"]:hover {
     <p>We guide students through every step of the EE process — from choosing a compelling research question, to structuring arguments, citing sources correctly, and polishing final drafts. Support is available for all IB subjects.</p>
   </div>
 </div>
-   <section id="testimonials">
+  <section id="testimonials">
   <h2>Testimonials</h2>
-  <div class="testimonial-cluster">
-    <div class="testimonial-bubble">
-      <div class="stars">★★★★★</div>
-      <p>"Ayushi made the toughest IB concepts so easy to understand. She’s not only a tutor but a mentor who truly cares about her students’ success." – IB Year 12 Student</p>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <div class="testimonial-bubble">
+        <div class="stars">★★★★★</div>
+        <p>"Ayushi made the toughest IB concepts so easy to understand..." – IB Year 12 Student</p>
+      </div>
+      <div class="testimonial-bubble">
+        <div class="stars">★★★★★</div>
+        <p>"We noticed a huge improvement in our daughter’s grades..." – Parent of Year 11 Student</p>
+      </div>
+      <div class="testimonial-bubble">
+        <div class="stars">★★★★★</div>
+        <p>"I was struggling with HL Math, but thanks to SYNC IB, I ended up with a 6!" – IB Graduate</p>
+      </div>
     </div>
-    <div class="testimonial-bubble">
-      <div class="stars">★★★★★</div>
-      <p>"We noticed a huge improvement in our daughter’s grades after joining SYNC IB. Highly recommend!" – Parent of Year 11 Student</p>
-    </div>
-    <div class="testimonial-bubble">
-      <div class="stars">★★★★★</div>
-      <p>"I was struggling with HL Math, but thanks to SYNC IB, I ended up with a 6! Ayushi’s methods are top-notch." – IB Graduate</p>
-    </div>
-    <div class="testimonial-bubble">
-      <div class="stars">★★★★★</div>
-      <p>"The support, motivation, and structure SYNC IB provides is amazing. It helped me stay on track and confident." – Year 12 Student</p>
-    </div>
-    <div class="testimonial-bubble">
-      <div class="stars">★★★★★</div>
-      <p>"Thanks to SYNC IB, my Chem IA received full marks! The personalised feedback made all the difference." – IB Chem HL Student</p>
-    </div>
-    <div class="testimonial-bubble">
-      <div class="stars">★★★★★</div>
-      <p>"Professional, patient, and understanding. SYNC IB tutoring is the best decision I made this year." – Year 11 Student</p>
-    </div>
-    <div class="testimonial-bubble">
-      <div class="stars">★★★★★</div>
-      <p>"SYNC IB breakdowns of Paper 1 essays were so easy to follow. I finally felt confident writing them." – English SL Student</p>
-    </div>
-    <div class="testimonial-bubble">
-      <div class="stars">★★★★★</div>
-      <p>"My son finally enjoyed Chemistry for the first time. Ayushi was so patient, and her quality of teaching is excellent. Thank you!" – Parent of Year 12 Student</p>
-    </div>
-    <div class="testimonial-bubble">
-      <div class="stars">★★★★★</div>
-      <p>"I did not think that I could even pass Bio HL when I first started. Through weekly sessions with Ayushi, she helped me get a 7!" – IB Graduate</p>
-    </div>
-    <div class="testimonial-bubble">
-      <div class="stars">★★★★★</div>
-      <p>"I wish I had joined SYNC IB sooner. Clear notes, super helpful tips." – Year 11 Student</p>
-    </div>
-    <div class="testimonial-bubble">
-      <div class="stars">★★★★★</div>
-      <p>"I went from constant 4s to consistent 7s in Business Management. It works!" – Year 12 Student</p>
-    </div>
-    <div class="testimonial-bubble">
-      <div class="stars">★★★★★</div>
-      <p>"Ayushi always made time to check in even outside of lesson times, she was always available. I felt supported every step of the way, which is the reason behind my success in the IB." – IB Psychology Student</p>
-    </div>
+  </div>
+  <div style="text-align:center; margin-top: 2rem;">
+    <a href="testimonials.html" class="view-all-btn">View All Testimonials</a>
   </div>
 </section>
    <h2 id="contact">Get in Touch</h2>

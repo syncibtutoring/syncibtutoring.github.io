@@ -446,35 +446,24 @@
     </div>
   </div>
 </section>
-   <h2 id="contact">Get in Touch</h2>
-<p style="font-size: 1.1rem; margin-bottom: 2rem; font-weight: 500;">
-  Ready to excel in the IB? Fill out the form below and we'll get back to you shortly!
-</p>
-<form name="submit-to-google-sheet" style="background-color: #ffffff; padding: 2.5rem; border-radius: 12px; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08); max-width: 800px; margin: 0 auto;">
-  <label for="name" style="font-weight: bold; font-size: 1rem; color: #005f73;">Name</label>
-  <input type="text" id="name" name="name" required style="padding: 1rem; border: 2px solid #ccc; border-radius: 8px; font-size: 1rem; margin-bottom: 1.5rem; width: 100%;">
-
-  <label for="phone" style="font-weight: bold; font-size: 1rem; color: #005f73;">Phone Number</label>
-  <input type="tel" id="phone" name="phone" required style="padding: 1rem; border: 2px solid #ccc; border-radius: 8px; font-size: 1rem; margin-bottom: 1.5rem; width: 100%;">
-
-  <label for="email" style="font-weight: bold; font-size: 1rem; color: #005f73;">Email</label>
-  <input type="email" id="email" name="email" required style="padding: 1rem; border: 2px solid #ccc; border-radius: 8px; font-size: 1rem; margin-bottom: 1.5rem; width: 100%;">
-
-  <label for="role" style="font-weight: bold; font-size: 1rem; color: #005f73;">Are you a:</label>
-  <select id="role" name="role" style="padding: 1rem; border: 2px solid #ccc; border-radius: 8px; font-size: 1rem; margin-bottom: 1.5rem; width: 100%;">
-    <option value="Student">Student</option>
-    <option value="Parent">Parent</option>
-  </select>
-
-  <label for="message" style="font-weight: bold; font-size: 1rem; color: #005f73;">What do you need help with?</label>
-  <textarea id="message" name="message" rows="5" required style="padding: 1rem; border: 2px solid #ccc; border-radius: 8px; font-size: 1rem; margin-bottom: 2rem; width: 100%;"></textarea>
-
-  <button type="submit" style="background-color: #ee9b00; color: white; padding: 1rem 2.5rem; border: none; border-radius: 10px; font-size: 1.1rem; cursor: pointer; font-weight: bold; transition: background-color 0.3s ease;">
-    Submit
-  </button>
-</form>
-
-<p id="msg" style="text-align: center; margin-top: 1.5rem; font-weight: bold; color: #005f73;"></p>
+    <h2 id="contact">Get in Touch</h2>
+    <form name="submit-to-google-sheet">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="role">Are you a:</label>
+      <select id="role" name="role">
+        <option value="Student">Student</option>
+        <option value="Parent">Parent</option>
+      </select>
+      <label for="message">What do you need help with?</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="msg"></p>
 
     <h2 id="contact-info">Contact Info</h2>
     <p>Email: <a href="mailto:ayushi.ibtutoring@gmail.com">ayushi.ibtutoring@gmail.com</a></p>

@@ -415,6 +415,17 @@ button[type="submit"]:hover {
   display: flex;
   animation: scroll 15s linear infinite;
 }
+    .carousel-testimonial {
+  min-width: 300px;
+  margin: 0 1rem;
+  background: white;
+  border-radius: 24px 24px 24px 6px;
+  padding: 1rem 1.5rem;
+  border: 2px solid #f4a261; /* ORANGEY BORDER 💥 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
 .testimonial-bubble {
   min-width: 300px;
   margin: 0 1rem;
@@ -536,15 +547,15 @@ button[type="submit"]:hover {
   <h2>Testimonials</h2>
   <div class="carousel-container">
     <div class="carousel-track">
-      <div class="testimonial-bubble">
+      <div class="carousel-testimonial">
         <div class="stars">★★★★★</div>
         <p>"Ayushi made the toughest IB concepts so easy to understand..." – IB Year 12 Student</p>
       </div>
-      <div class="testimonial-bubble">
+      <div class="carousel-testimonial">
         <div class="stars">★★★★★</div>
         <p>"We noticed a huge improvement in our daughter’s grades..." – Parent of Year 11 Student</p>
       </div>
-      <div class="testimonial-bubble">
+      <div class="carousel-testimonial">
         <div class="stars">★★★★★</div>
         <p>"I was struggling with HL Math, but thanks to SYNC IB, I ended up with a 6!" – IB Graduate</p>
       </div>

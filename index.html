@@ -10,6 +10,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <style>
+    #stickyNav {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+#stickyNav a {
+  color: #005f73;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+#stickyNav a:hover {
+  color: #ee9b00;
+}
+
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;

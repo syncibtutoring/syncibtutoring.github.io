@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+  <!-- Lottie player CDN -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SYNC IB Tutoring</title>
@@ -666,18 +668,89 @@ button[type="submit"]:hover {
     transform: translateY(-8px);
   }
 }
+    .hero-pro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  border-radius: 20px;
+  background: linear-gradient(to right, #fffdf7, #fefae0);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  color: #005f73;
+  margin-bottom: 1rem;
+}
+
+.hero-left p {
+  font-size: 1.25rem;
+  color: #0a9396;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.hero-cta {
+  display: inline-block;
+  background-color: #D4AF37;
+  color: white;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(212, 175, 55, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-cta:hover {
+  background-color: #B68C2A;
+  transform: translateY(-2px);
+}
+
+.hero-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-right lottie-player {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
   </style>
 </head>
 
 <body>
-  <section class="hero">
-  <div class="hero-text">
+ <!-- ✨ Modern HERO SECTION with Lottie Animation -->
+<section class="hero-pro">
+  <div class="hero-left">
     <h1>Unlock Your Full IB Potential</h1>
-    <p>Expert one-on-one tutoring for Year 10–12 students by high-achieving IB graduates.</p>
-    <a href="#contact" class="hero-btn">Get Started</a>
+    <p>High-impact tutoring for Year 10–12 students, led by elite IB graduates.</p>
+    <a href="#contact" class="hero-cta">Book My IB Tutor</a>
   </div>
-  <div class="hero-image">
-    <img src="banner/hero-illustration.png" alt="IB Tutoring Illustration">
+  <div class="hero-right">
+    <lottie-player 
+      src="https://lottie.host/8e1b36a5-75fc-4ce4-a17e-1f505cbffadc/XgAhbdHYWh.json"  
+      background="transparent" 
+      speed="1" 
+      loop 
+      autoplay>
+    </lottie-player>
   </div>
 </section>
   <header>

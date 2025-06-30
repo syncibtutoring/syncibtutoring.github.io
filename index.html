@@ -106,20 +106,20 @@ section {
       margin-bottom: 1rem;
     }
 
- .subjects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem; /* More breathing room between cards */
+.subjects-grid {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 1rem 0;
+  gap: 2rem;
+  padding: 2rem 0;
 }
 
 .subject-card {
+  width: 260px;
+  height: 260px;
   background-color: #ffffff;
   border: 2px solid #D4AF37;
   border-radius: 16px;
-  width: 240px;
-  height: 240px;
   padding: 1.2rem;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   text-align: center;
@@ -130,25 +130,37 @@ section {
 }
 
 .subject-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
-    .subject-card button {
-      margin-top: 1rem;
-      background-color: #D4AF37;
-      color: white;
-      border: none;
-      padding: 0.7rem 1.5rem;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: background-color 0.3s ease;
-    }
+.subject-card h3 {
+  font-size: 1.15rem;
+  color: #005f73;
+  margin-bottom: 0.6rem;
+}
 
-    .subject-card button:hover {
-      background-color: #B68C2A;
-    }
+.subject-card p {
+  font-size: 0.95rem;
+  color: #333;
+  flex-grow: 1;
+}
+
+.subject-card button {
+  margin-top: 1rem;
+  background-color: #D4AF37;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.subject-card button:hover {
+  background-color: #B68C2A;
+}
 
     .modal {
       display: none;

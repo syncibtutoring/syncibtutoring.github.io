@@ -106,23 +106,32 @@ section {
       margin-bottom: 1rem;
     }
 
-    .subjects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
+   .subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.8rem;
+  justify-items: center;
+}
 
-    .subject-card {
-      background-color: #ffffff;
-      border: 2px solid #D4AF37;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+.subject-card {
+  background-color: #ffffff;
+  border: 2px solid #D4AF37;
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 230px;
+  height: 230px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.subject-card:hover {
+  transform: scale(1.05);
+}
+
 
     .subject-card button {
       margin-top: 1rem;

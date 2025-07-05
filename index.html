@@ -797,14 +797,21 @@ button[type="submit"]:hover {
   color: #005f73;
   margin-bottom: 2rem;
 }
-    .hero-wrapper {
+ .hero-wrapper {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(to right, #fffdf7, #fefae0);
+  background: rgba(255, 255, 255, 0.25);  /* translucent white */
+  backdrop-filter: blur(12px);              /* glass blur */
+  -webkit-backdrop-filter: blur(12px);      /* Safari support */
   border-radius: 20px;
   margin: 3rem auto 5rem;
   max-width: 1200px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.06),      /* subtle drop shadow */
+    inset 0 0 30px rgba(255, 255, 255, 0.3); /* soft inner glow */
+  border: 4px solid transparent;            /* placeholder for gradient border */
+  z-index: 0;
+  transition: box-shadow 0.5s ease;
 }
 
 .hero-wave {

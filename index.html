@@ -570,86 +570,81 @@ button[type="submit"]:hover {
   font-size: 1.3rem;
   margin-top: 0.6rem;
 }
-    .tutor-carousel-container {
-  position: relative;
-  overflow: hidden;
-  padding: 3rem 1rem;
-  background: linear-gradient(to right, #e0f7fa, #f0fcfc);
+ .tutor-carousel-container {
+  background: linear-gradient(to right, #fffdf7, #fefae0);
+  padding: 2rem;
   border-radius: 20px;
   max-width: 1200px;
-  margin: 4rem auto;
-  box-shadow: 0 8px 20px rgba(0, 95, 115, 0.08);
+  margin: 2rem auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  position: relative;
 }
 
 .tutor-carousel-track {
   display: flex;
-  gap: 2rem;
   overflow-x: auto;
+  gap: 1.5rem;
   scroll-behavior: smooth;
   padding: 1rem 0;
 }
 
 .tutor-card {
-  flex: 0 0 300px;
-  background: white;
+  flex: 0 0 320px;
+  background-color: #ffffff;
   border-radius: 16px;
   padding: 1.5rem;
-  text-align: center;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  text-align: left;
   transition: transform 0.3s ease;
 }
 
-.tutor-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 14px;
-  margin-bottom: 1rem;
-  border: 3px solid #0a9396;
+.tutor-card:hover {
+  transform: translateY(-5px);
 }
 
 .tutor-card h3 {
   color: #005f73;
-  margin: 0.5rem 0;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .tutor-card p {
   font-size: 0.95rem;
-  margin: 0.3rem 0;
+  color: #333;
+  margin: 0.25rem 0;
 }
 
-.tutor-card .stars {
-  color: #d4a23a;
+.stars {
+  color: #D4AF37;
   font-size: 1.2rem;
   margin-top: 0.5rem;
 }
 
 .tutor-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #0a9396;
+  background-color: #005f73;
   color: white;
   border: none;
   font-size: 2rem;
-  padding: 0.4rem 1rem;
-  border-radius: 10px;
+  border-radius: 50%;
+  padding: 0.5rem 0.8rem;
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 2;
   transition: background-color 0.3s ease;
 }
 
 .tutor-arrow:hover {
-  background-color: #00787b;
+  background-color: #0a9396;
 }
 
 .tutor-arrow.left {
-  left: 10px;
+  left: -10px;
 }
 
 .tutor-arrow.right {
-  right: 10px;
+  right: -10px;
 }
 
 /* Responsive scroll on mobile */

@@ -797,6 +797,87 @@ button[type="submit"]:hover {
   color: #005f73;
   margin-bottom: 2rem;
 }
+    .hero-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, #fffdf7, #fefae0);
+  border-radius: 20px;
+  margin: 3rem auto 5rem;
+  max-width: 1200px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 1;
+}
+
+.hero-pro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  z-index: 2;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+  z-index: 2;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  color: #005f73;
+  margin-bottom: 1rem;
+}
+
+.hero-left p {
+  font-size: 1.2rem;
+  color: #0a9396;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.hero-cta {
+  display: inline-block;
+  background-color: #D4AF37;
+  color: white;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(212, 175, 55, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-cta:hover {
+  background-color: #B68C2A;
+  transform: translateY(-2px);
+}
+
+.hero-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.hero-right lottie-player {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
   </style>
 </head>
 <script>

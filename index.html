@@ -721,19 +721,20 @@ button[type="submit"]:hover {
 
 .icon-decor {
   position: absolute;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #005f73;
-  opacity: 0.07;
-  z-index: 1;
-  animation: subtleFloat 6s ease-in-out infinite;
+  opacity: 0.06;
+  z-index: 0;
+  pointer-events: none;
+  animation: iconFloat 6s ease-in-out infinite;
 }
 
-@keyframes subtleFloat {
+@keyframes iconFloat {
   0%, 100% {
-    transform: translateY(0);
+    transform: translateY(0px);
   }
   50% {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
   }
 }
 

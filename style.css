@@ -4,6 +4,6 @@
   filter: brightness(98%) saturate(110%);
 }
 
-
-
-
+body {
+  overflow-x: hidden;
+}

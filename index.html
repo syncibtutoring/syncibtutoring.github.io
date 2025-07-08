@@ -583,10 +583,17 @@ button[type="submit"]:hover {
 
 .tutor-carousel-track {
   display: flex;
+  flex-wrap: nowrap;
   overflow-x: auto;
-  gap: 1.5rem;
-  scroll-behavior: smooth;
-  padding: 1rem 0;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+
+.tutor-card {
+  flex: 0 0 90%;
+  max-width: 90%;
+  scroll-snap-align: center;
 }
 
 .tutor-card {

@@ -969,16 +969,32 @@ button[type="submit"]:hover {
     font-size: 0.95rem;
   }
 
-  .tutor-carousel-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
+ .tutor-carousel-container {
+  flex-direction: column;
+  align-items: stretch;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.tutor-carousel-track {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tutor-arrow {
+  display: none; /* Hide the arrows on mobile */
+}
 
   .tutor-card {
-    width: 100%;
-    margin: 1rem 0;
-  }
+  width: 100%;
+  margin: 1rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: white;
+  text-align: left;
+}
 
   .carousel-testimonial {
     min-width: 100%;
@@ -1061,6 +1077,21 @@ nav ul li a {
     height: 1200px; /* give more space vertically on phones */
   }
 }
+     .tutor-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.tutor-card p {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.tutor-card .stars {
+  font-size: 1.2rem;
+  color: #f4c430;
+}
+
   </style>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-TQs6mYeKY7u1lOQosv5aOqVQ7JSF9cihUnQ2E2RzZzFvVxU2yo9gO9OFlc2c+p3SK8Z4q1XvKmo9dvmSFAp7hA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>

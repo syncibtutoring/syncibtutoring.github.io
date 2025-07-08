@@ -952,27 +952,33 @@ button[type="submit"]:hover {
     margin-top: 2rem;
   }
 
- @media (max-width: 768px) {
+@media (max-width: 768px) {
   nav#stickyNav {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 0.5rem 0.75rem;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0.3rem 0.2rem; /* SUPER THIN padding */
     background-color: #007a8a;
+    height: 40px; /* Very short height */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
 
   nav#stickyNav a {
-    font-size: 0.9rem;
-    padding: 0.5rem;
+    font-size: 0.75rem; /* smaller font */
+    padding: 0.2rem 0.5rem;
     color: white;
     text-decoration: none;
-    flex: 1 1 auto;
+    white-space: nowrap;
+    flex: 1;
     text-align: center;
   }
 
   nav#stickyNav a:hover {
     background-color: #005f73;
-    border-radius: 6px;
+    border-radius: 4px;
   }
 }
 
